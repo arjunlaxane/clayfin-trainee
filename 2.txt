@@ -1,0 +1,308 @@
+
+24/01/2023
+
+
+
+
+
+
+
+--------------------------------console.dir()-------------------------------
+
+
+In JavaScript, dir() and log() are the methods of console object. Console object provides access to the browser’s debugging console.
+
+
+
+The method console.dir() displays an interactive list of the properties of the specified JavaScript object. The output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects.
+
+ In other words, console.dir() is the way to see all the properties of a specified JavaScript object in console by which the developer can easily get the properties of the object.
+
+object : A JavaScript object whose properties should be output.
+
+console.dir shows all properties of a DOM element and can display only one object.
+
+var a = 2;
+console.log(a);//2
+console.dir(a);//2
+
+var b = { a: 1, b: 2 };
+
+console.log(b);
+console.dir(b);
+
+->
+{a: 1, b: 2}
+Object-> Object
+          a:1
+          b:2
+
+
+console.dir(673563);
+console.dir('Welcome to Tutorialspoint');
+console.dir(76325 * 476);
+
+->
+673563
+ Welcome to Tutorialspoint
+ 36330700
+
+
+const nama = function () {
+  console.dir('Arjun');
+};
+nama(); 
+->Arjun
+
+var employee = {
+  name: 'Arjun',
+  role: 'trainee',
+  salary: '3.5LPA',
+};
+
+var bio = {
+  name: 'Arjun',
+  lastName: 'Laxane',
+};
+
+
+
+console.log('employee with console.log = ', employee);
+
+console.dir(employee);
+
+
+console.dir(bio, employee);
+
+
+->
+employee with console.log =  {name: 'Arjun', role: 'trainee', salary: '3.5LPA'}
+ Object
+ Object
+
+
+
+
+Just use JSON.stringify. What's happening is that when you use the string interpolation ${}, the toString method is called - on an object, the result of this is [object Object]:
+
+
+console.dir(`employee console dir, ${JSON.stringify(employee)}`);
+
+
+->
+
+
+
+Also note that dir is used for showing the different properties of objects. It's better to just use console.log, which means you can avoid JSON.stringify altogether:
+
+
+Parameters: console.dir method accepts single parameter which holds the object element.
+
+
+
+The console.log() method prints out a toString representation of the object in the console to the user. It returns the object in its string representation log()
+
+The main difference between these two methods is that the console.log() method displays the “toString” representation of any object passed to it.
+
+
+var arr = [1, 2, 3, 4, 5, 6];
+console.log(arr);
+console.dir(arr);
+
+->
+(6) [1, 2, 3, 4, 5, 6]
+VM579:3 Array(6)
+
+
+
+While console.log() will work for objects, there is a method specifically meant for displaying objects to the console called console.dir().
+
+
+console.dir(obj, obj); // outputs only first object
+
+-------------------------------TYPECONVERSIONS--------------------------------
+
+
+
+Type conversion (or typecasting) means transfer of data from one data type to another. Implicit conversion happens when the compiler (for compiled languages) or runtime (for script languages like JavaScript) automatically converts data types. The source code can also explicitly require a conversion to take place.
+
+
+For example, given the expression "foo" + 1, the Number 1 is implicitly converted into a String and the expression returns "foo1". Given the instruction Number("0x11"), the string "0x11" is explicitly converted to the number 17.
+
+var a1 = true;
+console.log(typeof a1); //boolean
+var b1 = String(a1);
+console.log(typeof b1); //string
+console.log(b1); //true
+
+var b2 = Number(a1);
+console.log(b2); //1
+console.log(typeof b2); //number
+
+var b3 = parseFloat(a1);
+console.log(b3); //NaN
+console.log(typeof b3); //number
+
+var a2 = 'Arjun';
+var b4 = parseFloat(a2);
+console.log(b4); //Nan
+console.log(typeof b4); //number
+
+var b5 = Number(a2);
+
+console.log(b5); //Nan
+console.log(typeof b5); //number
+
+
+Here number 1 will convert to string
+console.log('arjun' + 1); //arjun1---implicit conversion
+console.log(typeof ('arjun' + 1)); //string
+
+console.log(Number('11')); //explicit conversion
+
+
+
+
+
+
+------------------------------------use strict-----------------------------
+
+
+
+It helps you wtrite cleaner code . It prevents you from writing undeclared variable
+
+Strict Mode(“use strict”) helps identify common issues (or “bad” parts) and also helps with “securing” JavaScript. In ES5, the Strict Mode is optional but in ES6, it's needed for many ES6 features.
+
+
+'use strict';
+a = 10;
+console.log(a);
+-> ReferenceError: a is not defined      
+
+--------------------------------------NULL------------------------------
+The null value represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations.
+
+
+The value null is written with a literal: null. null is not an identifier for a property of the global object, like undefined can be. Instead, null expresses a lack of identification, indicating that a variable points to no object. In APIs, null is often retrieved in a place where an object can be expected but no object is relevant.
+
+
+console.log(typeof null);//object
+console.log(null); //null
+console.log(null === null);//true
+console.log(null == null); //true
+console.log(null + null); //0
+console.log(2 + null); //2
+console.log(null / null); //NaN
+console.log(null - null); //0
+console.log(null * null); //0
+console.log(5 - null); //5
+console.log(null - 5); //-5
+console.log(8 * null); //0
+console.log(8 * null === null * 5); //true
+console.log(null / 2);//0
+console.log(2 / null);//infinity
+
+
+null Vs undefined:
+
+
+typeof null          // "object" (not "null" for legacy reasons)
+typeof undefined     // "undefined"
+null === undefined   // false
+null  == undefined   // true
+null === null        // true
+null  == null        // true
+!null                // true
+isNaN(1 + null)      // false
+isNaN(1 + undefined) // true
+
+null is false so it's 0
+
+
+
+
+console.log(1 === true);//false
+console.log(0 === false);//false
+console.log(1 == true);//true
+console.log(0 == false);//true
+
+
+------------------------------------------------------------------------
+
+How to create a object in js?
+
+
+
+it is important to note that JavaScript is an object-based language based on prototypes, rather than being class-based.
+
+// Creating object with a constructor:
+
+ One of the easiest way to instantiate an object in JavaScript. Constructor is nothing but a function and with help of new keyword, constructor function allows to create multiple objects of same flavor as shown below:
+
+//simple function
+
+function vehicle(name, maker, engine) {
+  this.name = name;
+  this.maker = maker;
+  this.engine = engine;
+}
+
+
+//new keyword to create an object
+
+let car = new vehicle('GT', 'BMW', '1998cc');
+
+// console.log('Object-->', car);
+
+//Using object literals:
+
+ Literals are smaller and simpler ways to define objects.We simple define the property and values inside curly braces as shown below:
+
+//creating js objects with object literal
+
+
+let carr = {
+  name: 'GT',
+  maker: 'BMW',
+  engine: '1998cc',
+};
+ console.log(carr);
+
+
+
+//Creating object with Object.create() method:
+
+The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+
+const coder = {
+  isStudying: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I studying?: ${this.isStudying}`);
+  },
+};
+
+const me = Object.create(coder);
+me.name = 'Mukul';
+me.isStudying = true;
+me.printIntroduction();
+
+ console.log('me object-->', me);
+
+
+//Using es6 classes:
+
+object can be created out of a class in javascript as well
+
+
+class Vehicle {
+  constructor(name, maker, engine) {
+    this.name = name;
+    this.maker = maker;
+    this.engine = engine;
+  }
+}
+
+let car1 = new Vehicle('GT', 'BMW', '1998cc');
+
+console.log(car1);
+
