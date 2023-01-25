@@ -120,6 +120,37 @@ While console.log() will work for objects, there is a method specifically meant 
 
 console.dir(obj, obj); // outputs only first object
 
+
+
+--------------------------------console.error--------------------------------
+
+->
+The console.error() method outputs an error message to the Web console.
+The console is useful for testing purposes.
+
+const myObj = {firstname:"John", lastname:"Doe"};
+console.error(myObj);->{firstname: 'John', lastname: 'Doe'}
+
+To log out our own error message if the elements exists or not
+
+const element = document.getElementById("hh");
+undefined
+if(element == null){
+    console.error("Element missing");
+}
+ Element missing
+
+console.error uses:
+
+When you fetch some API and it is not reachable.
+While calculating something number is divided by 0.
+While accessing any array and index exceeds array length.
+An object property doesn't exist. and so on.
+----------------------------------------------------------------------------
+Why undefined:
+The last line indicate a response from function call, and since there is no return value, undefined is returned. This is natural occurence may be ignored
+
+
 -------------------------------TYPECONVERSIONS--------------------------------
 
 

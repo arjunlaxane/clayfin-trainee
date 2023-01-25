@@ -254,3 +254,8 @@ console.log(typeof ('arjun' + 1)); //string
 console.log('0 * 11' * 1); //NaN
 
 console.log(Number('11')); //explicit conversion
+
+//---------------------------------------------------------
+
+console.log(aaaa);
+aaaa = 5;
