@@ -36,13 +36,19 @@ function doConvert(val) {
     'ninety',
   ];
 
-  let num = ('0000000' + val)
-    .slice(-7)
-    .match(/^(\d{1})(\d{1})(\d{2})(\d{1})(\d{2})$/);
+  let outputText;
+  let num;
+  if (val === 0) {
+    return (outputText = 'zero');
+  } else {
+    num = ('0000000' + val)
+      .slice(-7)
+      .match(/^(\d{1})(\d{1})(\d{2})(\d{1})(\d{2})$/);
+  }
   // console.log(num);
   if (!num) return;
 
-  let outputText =
+  outputText =
     num[1] != 0
       ? (oneToTwenty[Number(num[1])] ||
           `${tenth[num[1][0]]} ${oneToTwenty[num[1][1]]}`) + ' million '
@@ -72,5 +78,5 @@ function doConvert(val) {
   return outputText;
 }
 
-let num = doConvert(123231);
+let num = doConvert(12352);
 console.log(num);
