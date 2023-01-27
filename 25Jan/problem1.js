@@ -1,6 +1,6 @@
 //25-01-2023
 
-//Q. convert number to simple worlds. 123 -> one two three
+//Q. convert number to simple words. 123 -> one two three
 
 let num = 12345;
 let reverse = 0;

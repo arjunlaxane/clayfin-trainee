@@ -1,4 +1,4 @@
-//Q. convert number to  worlds.
+//Q. convert number to  words.
 
 function doConvert(val) {
   let oneToTwenty = [
