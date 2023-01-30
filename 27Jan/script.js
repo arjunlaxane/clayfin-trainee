@@ -86,3 +86,14 @@ let {
 } = user;
 
 console.log(name, city, state, pin);
+
+//=================================================
+
+let object1 = { a: undefined, b: 2 };
+object1.c = 3;
+console.log(object1);
+
+const { a = 1, b, c, d = 4, e } = object1;
+
+console.log(object1);
+console.log(a, d, e); //1 4 undefined

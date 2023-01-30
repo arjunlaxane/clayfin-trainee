@@ -45,7 +45,7 @@ function doConvert(val) {
       .slice(-7)
       .match(/^(\d{1})(\d{1})(\d{2})(\d{1})(\d{2})$/);
   }
-  // console.log(num);
+  console.log(num);
   if (!num) return;
 
   outputText =
@@ -78,5 +78,5 @@ function doConvert(val) {
   return outputText;
 }
 
-let num = doConvert(12352);
+let num = doConvert(12);
 console.log(num);

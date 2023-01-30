@@ -259,3 +259,36 @@ console.log(Number('11')); //explicit conversion
 
 console.log(aaaa);
 aaaa = 5;
+
+//--------------------------------------------------------
+
+// practice:
+
+const arr2 = [
+  { a: 1, b: 2 },
+  { c: 3, d: 4 },
+  { e: 5, f: 6 },
+  { g: 7, h: 8 },
+  { i: 9, j: 10 },
+];
+const res1 = arr2.map(val => console.log('Answer is ' + val));
+
+const res2 = arr2.map(val => console.log('Answer is ', val));
+
+/*
+const res1 = arr2.map(val => console.log('Answer is ' + val));
+->
+Answer is [object Object]    
+Answer is [object Object]    
+Answer is [object Object]    
+Answer is [object Object]    
+Answer is [object Object] 
+--------------------------------
+const res2 = arr2.map(val => console.log('Answer is ', val));
+->
+Answer is  { a: 1, b: 2 }    
+Answer is  { c: 3, d: 4 }    
+Answer is  { e: 5, f: 6 }    
+Answer is  { g: 7, h: 8 }    
+Answer is  { i: 9, j: 10 }
+*/
