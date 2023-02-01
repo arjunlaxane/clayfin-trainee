@@ -204,6 +204,12 @@ It helps you wtrite cleaner code . It prevents you from writing undeclared varia
 
 Strict Mode(“use strict”) helps identify common issues (or “bad” parts) and also helps with “securing” JavaScript. In ES5, the Strict Mode is optional but in ES6, it's needed for many ES6 features.
 
+So "use strict"; only matters to new compilers that "understand" the meaning of it.
+
+Strict mode makes it easier to write "secure" JavaScript.
+
+
+
 
 'use strict';
 a = 10;

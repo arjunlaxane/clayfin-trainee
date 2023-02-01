@@ -1,4 +1,44 @@
 What is noscript?
 
 
+The <noscript> HTML element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.
+
+
+
+
+Difference between for of and for in:
+
+->
+
+There are two ways of many, using which you can loop over the iterables in JavaScript.
+
+While both of the statements can loop over the iterables such as enumerable properties, there are key differences.
+
+1.First, the for...in can loop through both Arrays and Objects while the for...of can only loop through Arrays, Map, Set, arguments object.
+
+for....of : TypeError: car is not iterable
+
+
+
+2.By default, the for...in iterates over property names and the for...of iterates over property values.
+
+const rgb = ['red', 'green', 'blue']
+for (let key in rgb) {
+   console.log(key); // logs "0", "1", "2"
+}
+As you may observe, the for...in is iterating over the keys of the array and hence the output is "0", "1", "2".
+On the other hand, let’s iterate the same array using for...of.
+for (let value of rgb) {
+   console.log(value); // logs "red", "green", "blue"
+}
+As you can see, the for...of can only iterate over array values, and hence the output would be "red", "green", "blue".
+
+
+So, by looking at the differences both of these for statements, it would be safe to tell that the for...in can be used in most of the cases as you’d be using it with both Objects and Arrays and also you can get values of the properties using their keys. However, when you’re only working with Arrays and only cares about property values, you’d be better off with the for...of.
+
+
+
+
+
+
 
