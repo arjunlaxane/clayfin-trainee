@@ -1,0 +1,159 @@
+TASK: 
+
+
+ 1. Find the features of both OOPS and functional programming
+=>
+Functional programming:
+
+1.This programming paradigm emphasizes on the use of functions where each function performs a specific task.	
+
+
+2.Fundamental elements used are variables and functions.The data in the functions are immutable(cannot be changed after creation).	
+
+3.Importance is not given to data but to functions.	
+
+4.It follows declarative programming model.	
+
+5.It uses recursion for iteration.	
+
+6.It is parallel programming supported.	
+
+
+7.The statements in this programming paradigm does not need to follow a particular order while execution.	
+
+8.Does not have any access specifier.	
+
+9.To add new data and functions is not so easy.	
+
+
+10.No data hiding is possible. Hence, Security is not possible.	
+
+
+
+Object oriented programming:
+
+1.This programming paradigm is based on object oriented concept. Classes are used where instance of objects are created
+
+2.Fundamental elements used are objects and methods and the data used here are mutable data.
+
+3.Importance is given to data rather than procedures.
+
+4.It follows imperative programming model.
+
+5.It uses loops for iteration.
+
+6.It does not support parallel programming.
+
+7.The statements in this programming paradigm need to follow an order i.e., bottom up approach while execution.
+
+8.Has three access specifiers namely, Public, Private and Protected.
+
+9.Provides an easy way to add new data and functions.
+
+10.Provides data hiding. Hence, secured programs are possible.
+
+
+-----------------------------------------------------------------------
+
+Advantages and disadvantages of Javascript?
+
+->
+
+Advantages:
+
+
+1.Regardless of where you host JavaScript, it always gets executed on the client environment to save lots of bandwidth and make the execution process fast.
+
+2.In JavaScript, XMLHttpRequest is an important object that was designed by Microsoft. The object calls made by XMLHttpRequest as an asynchronous HTTP request to the server to transfer the data to both sides without reloading the page
+
+3.The biggest advantage of JavaScript having the ability to support all modern browsers and produce an equivalent result.
+
+4.Global companies support community development by creating projects that are important. An example is Google (created the Angular framework) or Facebook (created the React.js framework).
+
+5.JavaScript is employed everywhere on the web.
+
+6.JavaScript plays nicely with other languages and may be utilized in an enormous sort of applications.
+
+7.There are many open-source projects that provide useful help for developers to add JavaScript.
+
+8.There are many available courses within the field of JavaScript, because of which you’ll quickly and simply expand your knowledge of this programming language.
+
+9.It is not difficult to start working in JavaScript. For this reason, many of us prefer to start our adventure in the IT sector by learning this language.
+
+10.It gives the power to make rich interfaces.
+
+11.There are some ways to use JavaScript through Node.js servers. It is possible to develop a whole JavaScript app from front to back using only JavaScript.
+
+
+
+
+Disadvantages:
+
+1.This may be difficult to develop large applications, although you’ll also use the TypeScript overlay.
+
+2.This applies to larger front-end projects. The configuration is often a tedious task to the number of tools that require to figure together to make an environment for such a project. This is often directly associated with the library’s operation.
+
+
+3.The main problem or disadvantage in JavaScript is that the code is always visible to everyone anyone can view JavaScript code.
+
+
+4.No matter what proportion fast JavaScript interprets, JavaScript DOM (Document Object Model) is slow and can be a never-fast rendering with HTML.
+
+
+5.If the error occurs in JavaScript, it can stop rendering the whole website. Browsers are extremely tolerant of JavaScript errors.
+
+
+6.JavaScript is usually interpreted differently by different browsers. This makes it somewhat complex to read and write cross-browser code
+
+
+7.Though some HTML editors support debugging, it’s not as efficient as other editors like C/C++ editors. Hence difficult for the developer to detect the matter.
+
+8.This continuous conversion takes longer than the conversion of a number to an integer. This increases the time needed to run the script and reduces its speed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
