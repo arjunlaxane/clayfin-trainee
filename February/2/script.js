@@ -76,6 +76,4 @@ console.log(v);
 let q = BigInt(1);
 console.log(q); //1n
 
-console.log(Number.MAX_VALUE > BigInt(22)); //true
-
 console.log(typeof BigInt(21)); //bigint
