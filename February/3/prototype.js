@@ -98,13 +98,18 @@ Can a GFG User cook: Can't say
 
 //The JavaScript prototype property also allows you to add new methods to objects constructors:
 
-// function Person(first, last, age, eyecolor) {
-// this.firstName = first;
-// this.lastName = last;
-// this.age = age;
-// this.eyeColor = eyecolor;
-// }
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
 
-// Person.prototype.name = function () {
-// return this.firstName + ' ' + this.lastName;
-// };
+Person.prototype.fullName = function () {
+  return this.firstName + ' ' + this.lastName;
+};
+
+const myFather = new Person('John', 'Doe', 22, 'black');
+
+console.log(myFather);
+console.log(myFather.fullName());
