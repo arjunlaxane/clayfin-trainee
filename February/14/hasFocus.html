@@ -1,0 +1,32 @@
+<!-- The hasFocus() method returns a true if the document (or any element in the document) has focus.Otherwise it returns false.
+
+ Click inside this document to get focus.
+Click outside this document to lose focus.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Has Focus</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      setInterval('myFunction()', 1);
+
+      function myFunction() {
+        let text;
+        if (document.hasFocus()) {
+          text = 'The document has focus.';
+        } else {
+          text = 'The document does NOT have focus.';
+        }
+        document.getElementById('demo').innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
