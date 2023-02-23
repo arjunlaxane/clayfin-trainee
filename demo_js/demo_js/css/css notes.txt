@@ -1,0 +1,70 @@
+Css:
+
+cascading style sheet
+
+document
+
+css engine - browser
+
+cssom - css obj model
+
+css added in html--> parsed-cssom
+html - parsed dom
+finally merged given to paint/renderer
+
+
+Cascading: one inside another
+
+style: color, appearence, layout, height, font size ,width
+
+Sheet : file
+
+
+
+inline -> more priority - only for that html element - cannot be resused for another element
+embedded -> least - only by that html file alone, cannot be reused by other html pages
+external -> less - can be used by any html files (global)
+
+how to add:
+
+inline styles:
+
+using attribute : style attribute - owned by all elements
+
+<p style="...."> hi</p>
+
+embedded style:
+==================
+in head tag
+<style>
+	class
+	selectors....
+<style>
+
+external style sheet:
+
+<link rel="stylesheet" href="path of style.css">
+
+
+
+syntax:
+
+
+selector name{
+	property1:value;
+	property2:value;
+}
+
+
+types of selectors:
+
+	universal
+	tagname
+	id
+	class
+	pseudo
+	child 
+	sibiling
+	compound 
+	descendant 
+

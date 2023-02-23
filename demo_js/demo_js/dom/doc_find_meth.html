@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       var a=90;
+       if(a>100)
+        console.log(element)
+        else
+        console.log('hiii')
+    </script> 
+</head>
+<body>
+    <input type="text" id="i1" value="hello how are you"/>
+    <div id="content" value="i am div" numb="1" >
+       <h1>hi</h1>
+    </div>
+    <div id="data">
+        <h1>hello</h1>
+    </div>
+    <div class="main-content">
+        <h2>main content</h2>
+        <div>
+            <p>i am nested div's child -para4 </p>
+        </div>
+        <p>i am outside div's child -para4 </p>
+    </div>
+    <div class="main-content">
+        <p>main content-same-style-para3</p>
+    </div>
+    <p>para1</p>
+    <p>para2</p>
+    <h6 id="h6">hi i am h6</h6>
+</body>
+<script>
+    // var element=document.getElementById("content");
+    // console.log(element)
+    // // console.log(element.value)
+    // console.log("before ",element.getAttribute("value"))
+    // element.setAttribute("value","i wont change???")
+    // console.log("after ",element.getAttribute("value"))
+    // console.log(element.getAttribute("numb"))
+    var element1=document.getElementById("i1");
+    // console.log(i1)
+    // console.log(i1.value)
+    var htmlElements=document.getElementsByClassName("main-content");
+    console.log(htmlElements);
+   var allDiv=document.getElementsByTagName("div");
+   console.log(allDiv);
+   var allP=document.getElementsByTagName("p");
+   console.log(allP);
+   var onlyChildOfDivP=document.getElementsByTagName("div>p");
+   console.log(onlyChildOfDivP);//empty - HTMLCollection []
+
+
+  var qOne= document.querySelector("div>p");
+  console.log(qOne);
+  var qDivOne= document.querySelector("div");
+  console.log(qDivOne);// selects only one though multiple match is there
+  var qAll=document.querySelectorAll("div>p");
+  console.log(qAll);
+  var qh6= document.querySelector("#h6");
+  console.log(qh6);
+
+  console.log(document.doctype)//<doctype html
+  console.log(document.contentType);//text/html
+</script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//     let promise = new Promise(function(resolve, reject) {
+//   // not taking our time to do the job
+//    // setTimeout(()=>resolve(123),3000); // immediately give the result: 123
+//    setTimeout(()=>reject(new Error("couldn't get data")),3000);    
+// });
+//    // console.log(promise.then((r)=>console.log(r)))
+//   promise.then(
+//   result => console.log(result), // shows "done!" after 1 second
+//  // error => console.log(error) // doesn't run
+// );
+// promise.catch(console.log)
+
+// let promise = new Promise(function(resolve, reject) {
+//     setTimeout(()=>{
+//         resolve("enter number not char");
+//     },3000);
+// });
+// //second arg is null because we use catch block
+// promise.then(
+//     result =>{result= result.concat(' hi'); console.log(result);},null
+//   // error=>console.log('i am in then ',error)//1st 
+//    );
+// // console.log(promise)
+// promise.catch(x=>console.log(x))//2nd
+
+// f=open file 
+// read a File
+// write to another file //closed automatically after writing
+//f must be closed because we dev opened it
+//happens there is a erro in line  36 while reading the file
+// can be closed ie assigned to null or undefined in finally block 
+// as they execute this block either its successfule or error
+
+// case2
+// let promise1 = new Promise(function(resolve, reject) {
+//   resolve(1);
+//   setTimeout(() => resolve(2), 1000);//is not called
+// });
+
+// promise1.then(console.log);
+
+//promise chaining
+// let promise = new Promise(function(resolve, reject) {
+//   setTimeout(() => resolve(1), 1000);
+// });
+// promise.then(
+//     (t)=>console.log('old promise object 1',t)
+// )
+// promise.then(
+//     (t)=>console.log('old promise object 2 ',t)
+// )
+// console.log(typeof(promise))
+// var p1=promise.then(
+//     (r)=>{
+//         console.log('p1 1st ',r)//1
+//     return r*2;  //returns 2 is final result  
+//     }
+// )
+// p1.then(
+//     (r)=>{
+//         console.log('p1 2nd ',r)//2
+//     return r*2;    
+//     }
+// )
+// p1.then(
+//     (r)=>{
+//         console.log('p1 3nd ',r)//2
+//     return r*2;    
+//     }
+// )
+
+// console.log(typeof(p1))
+
+//task - print error object
+// var promise2=fetch("https://jsonplaceholder.typicode.com/user");
+// // console.log(promise2)
+// promise2.then(x=> x.json()).then(y=>console.log(y)).catch(
+//     error=>console.log('error occured... ',error)
+// )
+// till implicit try and catch - js.info
+let urls = [
+  'https://api.github.com/users/iliakan',
+  'https://api.github.com/users/remy',
+  'https://no-such-url'
+];
+
+Promise.allSettled(urls.map(url => fetch(url)))
+  .then(results => { // (*)
+    results.forEach((result, num) => {
+      if (result.status == "fulfilled") {
+        alert(`${urls[num]}: ${result.value.status}`);
+      }
+      if (result.status == "rejected") {
+        alert(`${urls[num]}: ${result.reason}`);
+      }
+    });
+  });
+Promise.race([
+  new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
+  new Promise((resolve, reject) => setTimeout(() => reject(new Error("Whoops!")), 2000)),
+  new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000))
+]).then(alert); // 1
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
