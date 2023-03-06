@@ -189,3 +189,10 @@ array12.sort(function (a, b) {
 console.log(array12); //[ 1, 4, 21, 30, 100000 ]
 
 //--------------------------------------TASK------------------------------------
+
+//  write a logic to assign default values of other index which is not in arr array
+//  ex: in above code arr[3] and arr[2] should have 0
+
+let arr = [1, 2, 3, 4, 5, 6];
+arr[3] = arr[2] = 0;
+console.log(arr);

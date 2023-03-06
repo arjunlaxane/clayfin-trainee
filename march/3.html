@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/Underscore.js"></script>
+  </head>
+  <body>
+    <script>
+      var people = [
+        {
+          id: 1,
+          date: '2013-07-25 00:00:00.0',
+          val: 11599,
+          status: 'CLOSED',
+        },
+        {
+          id: 2,
+          date: '2013-07-25 00:00:00.0',
+          val: 256,
+          status: 'PENDING_PAYMENT',
+        },
+        {
+          id: 3,
+          date: '2013-07-25 00:00:00.0',
+          val: 12111,
+          status: 'COMPLETE',
+        },
+        {
+          id: 4,
+          date: '2013-07-25 00:00:00.0',
+          val: 8827,
+          status: 'CLOSED',
+        },
+        {
+          id: 5,
+          date: '2013-07-25 00:00:00.0',
+          val: 11318,
+          status: 'COMPLETE',
+        },
+        {
+          id: 6,
+          date: '2013-07-25 00:00:00.0',
+          val: 7130,
+          status: 'COMPLETE',
+        },
+        {
+          id: 7,
+          date: '2013-07-25 00:00:00.0',
+          val: 4530,
+          status: 'COMPLETE',
+        },
+        {
+          id: 8,
+          date: '2013-07-25 00:00:00.0',
+          val: 2911,
+          status: 'PENDING_PAYMENT',
+        },
+        {
+          id: 9,
+          date: '2013-07-25 00:00:00.0',
+          val: 5657,
+          status: 'PENDING_PAYMENT',
+        },
+        {
+          id: 10,
+          date: '2013-07-25 00:00:00.0',
+          val: 5658,
+          status: 'PROCESSING',
+        },
+      ];
+
+      const myWeakSet = new WeakSet();
+
+      myWeakSet.add(people);
+      console.log(myWeakSet);
+
+      // $(document).ready(function () {
+      //   let ans = _.filter(people, function (x) {
+      //     return x.status === 'COMPLETE';
+      //   });
+
+      //   console.log(ans);
+      // });
+
+      // let weakMap = new WeakMap();
+      // const ob1 = {};
+
+      // let a = weakMap.set(ob1, 1);
+      // let b = weakMap.set(ob1, 2);
+      // console.log(a);
+      // // let d = weakMap.has();
+      // console.log(d);
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it.
+
+WeakMap has only the following methods:
+
+weakMap.set(key, value)
+weakMap.get(key)
+weakMap.delete(key)
+weakMap.has(key)
+
+ -->
