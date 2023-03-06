@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      .buttonClass {
+        background-color: #008cba; /* Blue */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#btn1').click(function () {
+          console.log('#########');
+
+          $('input').each(function () {
+            console.log($(this).val());
+          });
+
+          console.log('#########');
+        });
+
+        $('#btn2').click(function () {
+          console.log('#########');
+
+          $(':input').each(function () {
+            console.log($(this).val());
+          });
+
+          console.log('#########');
+        });
+
+        $('#btn3').click(function () {
+          console.log('#########');
+
+          $('input[type="text"]').each(function () {
+            console.log($(this).val());
+          });
+
+          console.log('#########');
+        });
+
+        $('#btn4').click(function () {
+          console.log('#########');
+
+          $(':input[type="text"]').each(function () {
+            console.log($(this).val());
+          });
+
+          console.log('#########');
+        });
+      });
+    </script>
+
+    First Name : <input type="text" name="fname" value="Karthikeyan" />
+    <br /><br />
+    Last Name : <input type="text" name="lname" value="Raman" /> <br /><br />
+    Gender :
+    <input type="radio" name="Gender" checked="checked" value="Male" />Male
+    <input type="radio" name="Gender" value="Female" />Female <br /><br />
+    Technology :
+    <input
+      type="checkbox"
+      name="skills"
+      checked="checked"
+      value="JavaScript"
+    />JavaScript
+    <input
+      type="checkbox"
+      name="skills"
+      checked="checked"
+      value="jQuery"
+    />jQuery
+    <input type="checkbox" name="skills" checked="checked" value="Java" />Java
+    <input type="checkbox" name="skills" value="C#" />C# <br /><br />
+    Country:
+    <select>
+      <option selected="selected" value="USA">USA</option>
+      <option value="India" selected>India</option>
+      <option value="UK">UK</option>
+    </select>
+    <br /><br />
+    Interests :
+    <br /><br />
+    <textarea rows="4" cols="100">
+Cricket is the favourite sport
+Fan of Manchester United Football Club in English Premier League
+    </textarea>
+    <br /><br />
+    <input type="button" class="buttonClass" value="input" id="btn1" />
+    <input type="button" class="buttonClass" value=":input" id="btn2" />
+    <input type="button" class="buttonClass" value="input Text" id="btn3" />
+    <input type="button" class="buttonClass" value=":input Text" id="btn4" />
+  </body>
+</html>

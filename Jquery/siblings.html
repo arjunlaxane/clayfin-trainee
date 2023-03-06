@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .siblings * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $('li.start').siblings().css({ color: 'red', border: '2px solid red' });
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+      The siblings() method returns all sibling elements of the selected
+      element. Sibling elements are elements that share the same parent.
+    </p>
+
+    <div style="width: 500px" class="siblings">
+      <ul>
+        ul (parent)
+        <li>li (the previous sibling of "start")</li>
+        <li>li (the previous sibling of "start")</li>
+        <li class="start">li (sibling)</li>
+        <li>li (the next sibling of "start")</li>
+        <li>li (the next sibling of "start")</li>
+      </ul>
+    </div>
+  </body>
+</html>

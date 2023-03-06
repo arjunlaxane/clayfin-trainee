@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      .buttonClass {
+        background-color: #008cba; /* Blue */
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.t1').select(function () {
+          $('#myspan').html(' Value Selected!');
+        });
+
+        $('#btn1').click(function () {
+          $('.t1').trigger('select');
+        });
+
+        $('#btn2').click(function () {
+          $('.t1').triggerHandler('select');
+        });
+      });
+    </script>
+    <p><input class="t1" type="text" value="Clayfin" /></p>
+    <p><input class="t1" type="text" value="Clayfin" /></p>
+    <br />
+    <p><span id="myspan"></span></p>
+    <br />
+    <input type="button" class="buttonClass" value="trigger" id="btn1" />
+    <input type="button" class="buttonClass" value="triggerHandler" id="btn2" />
+  </body>
+</html>

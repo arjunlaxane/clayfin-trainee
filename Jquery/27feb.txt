@@ -1,0 +1,25 @@
+Advantages and disadvantages of AJAX
+
+
+
+Pros −
+
+Allows applications to render without data and fill data as the application gets it from the server.
+
+Gives platform independence to application developers
+
+Faster page renders
+
+More responsive applications
+
+No rerenders of whole pages are needed to update only a single area.
+
+Cons−
+
+Any user whose browser does not support JavaScript or XMLHttpRequest, or has this functionality disabled, will not be able to properly use pages that depend on Ajax.
+
+Multiple server requests need more data consumed at the client-side.
+
+Failure of any one request can fail the load of the whole page.
+
+Browsers with JS disabled will not be able to use pages using ajax.
