@@ -20,26 +20,21 @@
     ></script>
 
     <script>
-      // var Geek = Backbone.Model.extend({
-      //   defaults: {
-      //     id: -1,
-      //     Name: 'Anonymous',
-      //   },
+       // $(document).ready(function(){
+          // $('#btn').click(function(){
+              // alert('hi')
+         // })
       // });
-      var Geek = Backbone.Model.extend({ id: -1, Name: 'Anonymous' });
-      //defaults is keyword
-      var geek1 = new Geek();
-      var geek2 = new Geek();
-      geek1.set({ city: 'chn' });
-      geek2.set({ city: 'bglr' });
-      console.log(geek1.get('city'), geek2.get('city'));
-      console.log(geek1._previousAttributes);
-      console.log(geek1.attributes);
-      console.log(geek1.__proto__.id);
-      console.log(geek1);
+      $('#name').html(name);
+      function set() {
+        var name = prompt('enter name');
+        document.getElementById('name').innerHTML = `<h1>${name}</h1>`;
+      }
     </script>
   </head>
   <body>
     <p>TASK</p>
+    <div id="name"></div>
+    <button id="btn" onclick="set()">click</button>
   </body>
 </html>
