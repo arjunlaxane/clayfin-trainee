@@ -20,25 +20,18 @@
     ></script>
 
     <script>
-      console.log(Backbone.Model);
-      // var Car = Backbone.Model.extend({ name: 'ajay', age: 30 });
-      var Car = Backbone.Model.extend();
-
-      var car1 = new Car();
-
-      car1.set({ name: 'Altroz', price: undefined });
-
-      if (car1.has('name')) {
-        console.log('Car1 has a attribute', true);
-      } else {
-        console.log('Car1 has no name attribute', false);
-      }
+      let X = Backbone.Model.extend({
+        initialize: function () {
+          console.log('Hello World!');
+        },
+      });
+      var Y = new X();
     </script>
   </head>
   <body>
     <p>
-      The Backbone.JS Has() model is used to get a true value, if the attribute
-      value is defined with a non-null value or non-undefined value.
+      The Backbone.JS Extend() model extends the Backbone.model class while
+      creating a backbone model.
     </p>
   </body>
 </html>
